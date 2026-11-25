@@ -1,0 +1,12 @@
+Biofoundry Workbench
+
+This product is a private fork of labnoteO Desktop
+(https://github.com/sblabkribb/labnoteo-desktop), licensed under the
+Apache License, Version 2.0. It includes software developed for
+labnoteO Desktop and the labnoteO Obsidian plugin (labnoteo-core,
+app/vendor/labnoteo). See LICENSE for the licence text and
+THIRD_PARTY_NOTICES.md for bundled third-party software.
+
+Files carried over from labnoteO Desktop have been modified for
+Biofoundry Workbench (product name, application identifier, disabled
+updater, MCP server and skill names, and the workbench layout).
