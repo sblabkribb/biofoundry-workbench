@@ -4,7 +4,9 @@
 
 [English](README.md) · **한국어**
 
-[사용 흐름](#기능) · [BioModel Portal](#biomodel-portal-연결) · [화면](#화면) · [라이선스](LICENSE)
+[사용 흐름](#기능) · [화면](#화면) · [라이선스](LICENSE)
+
+[PartBank](#partbank-연결) · [RAPID](#rapid-연결) · [Workflow](#workflow-연결-bfworkflow) · [BioModel Portal](#biomodel-portal-연결)
 
 > Windows x64 설치 파일은 [최신 GitHub 릴리스](https://github.com/sblabkribb/biofoundry-workbench/releases/latest)에서 받으세요.
 > 설치 파일에 Windows 코드 서명이 없어 처음 설치할 때 SmartScreen 경고가 뜰 수 있습니다. 0.1.1부터는 업데이트를
@@ -72,10 +74,31 @@ GFP 발현 프로젝트에서 대화를 시작하고, 웹의 결과를 실험 �
 | 0:56 | 외부 에이전트의 수정 검토 |
 | 1:10 | Workbench 업데이트 다운로드 |
 
+### PartBank 연결
+
+**설정 › 연동 › 연구 서비스 › partbank**에서 **partbank 서버** 또는 **partbank 데스크톱 앱**의 주소와 API 키를 저장하고,
+**검색에 쓸 연결**에서 해당 연결을 고릅니다. API 키는 PartBank의 **Profile › API Keys**에서 발급합니다.
+[PartBank 열기](https://partbank.kbiofoundry.kr/)
+
+Workbench 사이드바의 **샘플 › partbank**에서 기존 항목을 찾아 **샘플로 가져오기**를 누릅니다.
+검색 결과에서 PartBank의 원본 항목도 열 수 있습니다.
+
 ### RAPID 연결
 
-**설정 › 연동 › 외부 MCP 서버**에서 **RAPID**를 선택하고 RAPID에서 발급한 인증 정보를 저장합니다.
-**연결 확인**에서 계정으로 사용할 수 있는 도구를 확인합니다. 브라우저 탭에서 RAPID 실행 결과를 열고 노트에 실행 정보를 넣을 수도 있습니다.
+**설정 › 연동 › 외부 MCP 서버 › RAPID**에서 RAPID의 **MCP** 탭에서 발급한 API 키 또는 KBF 로그인 토큰을
+**토큰 저장**으로 등록하고 **연결 확인**을 누릅니다. [RAPID 열기](https://rapid.kbiofoundry.kr/)
+
+기존 실행 결과를 인용하려면 Workbench의 브라우저 탭에서 열고 **Ctrl+Shift+S**로 필요한 영역을 고릅니다.
+**노트에 넣기**에서 Workbench가 실행을 인식하면 **RAPID 실행 넣기**를 선택해 실행 ID와 출처 링크를 남깁니다.
+
+### Workflow 연결 (bfworkflow)
+
+**설정 › 연동 › 연구 서비스 › bfworkflow**에서 **서버** 또는 **bfworkflow 데스크톱 앱**을 고릅니다.
+서버를 고른 경우 서버 주소를 입력합니다. 선택한 연결의 API 키를 저장합니다. 웹에서는 **프로필 › API 키**에서 발급합니다.
+[bfworkflow 열기](https://workflow.kbiofoundry.kr/)
+
+Workflow와 Unit Operation 카탈로그를 가져오려면 **Ctrl+P**에서 **bfworkflow 카탈로그 동기화하기**를 선택하고 변경 내용을 확인합니다.
+기존 노트는 **bfworkflow 설계에서 노트 만들기**에서 설계를 선택한 뒤 **bfworkflow에 저장된 노트 쓰기**로 실험에 가져옵니다.
 
 ### BioModel Portal 연결
 

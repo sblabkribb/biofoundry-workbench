@@ -4,7 +4,9 @@
 
 **English** · [한국어](README.ko.md)
 
-[Get started](#features) · [BioModel Portal](#connect-biomodel-portal) · [Screenshots](#screenshots) · [License](LICENSE)
+[Get started](#features) · [Screenshots](#screenshots) · [License](LICENSE)
+
+[PartBank](#connect-partbank) · [RAPID](#connect-rapid) · [Workflow](#connect-workflow-bfworkflow) · [BioModel Portal](#connect-biomodel-portal)
 
 > Download the Windows x64 installer from the [latest GitHub release](https://github.com/sblabkribb/biofoundry-workbench/releases/latest).
 > Windows SmartScreen may warn on first install because the installer is unsigned. Workbench 0.1.1 and later ask before
@@ -75,11 +77,32 @@ Windows build updating from `v0.1.1` to `v0.1.2` through the download stage.
 | 0:57 | Review an external agent's edit |
 | 1:11 | Download a Workbench update |
 
+### Connect PartBank
+
+Open **Settings › Integrations › Research services › partbank**. Enter the address and API key for your
+**partbank server** or **partbank desktop app**, then choose it in **Connection to search**. Issue an API key from
+**Profile › API Keys** in PartBank. [Open PartBank](https://partbank.kbiofoundry.kr/)
+
+In the Workbench sidebar, open **Samples › partbank**, find an existing item, and select **Import as sample**.
+You can open the original PartBank record from the results.
+
 ### Connect RAPID
 
-Open **Settings › Integrations › External MCP servers**, choose **RAPID**, and save your RAPID bearer credential.
-Use the connection check to see which tools your account can access. You can also open RAPID in a browser tab and
-add a run reference to a note.
+Open **Settings › Integrations › External MCP servers › RAPID**. Use **Save token** with an API key from the
+RAPID **MCP** tab or your KBF sign-in token, then select **Test connection**. [Open RAPID](https://rapid.kbiofoundry.kr/)
+
+To cite an existing run, open it in a Workbench browser tab and use **Ctrl+Shift+S** to select part of the page.
+Click **Insert into note**, then **Insert RAPID run** when Workbench recognizes the run. The note records the run ID and source link.
+
+### Connect Workflow (bfworkflow)
+
+Open **Settings › Integrations › Research services › bfworkflow**. Choose **Server** or **bfworkflow desktop app**.
+For a server connection, enter the server address. Save the API key for the chosen connection. The web app issues keys
+under **Profile › API keys**. [Open bfworkflow](https://workflow.kbiofoundry.kr/)
+
+To bring in the Workflow and Unit Operation catalogs, press **Ctrl+P**, choose **Sync catalogs from bfworkflow**,
+and review the proposed changes. To import saved notes, select **Create notes from a bfworkflow design**, choose a
+design, and select **Use the notes saved in bfworkflow** to bring them into your experiment.
 
 ### Connect BioModel Portal
 
