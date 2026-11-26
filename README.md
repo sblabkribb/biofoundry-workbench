@@ -4,7 +4,7 @@
 
 **English** · [한국어](README.ko.md)
 
-[Get started](#features) · [Screenshots](#screenshots) · [License](LICENSE)
+[Get started](#features) · [BioModel Portal](#connect-biomodel-portal) · [Screenshots](#screenshots) · [License](LICENSE)
 
 > Download the Windows x64 installer from the [latest GitHub release](https://github.com/sblabkribb/biofoundry-workbench/releases/latest).
 > Windows SmartScreen may warn on first install because the installer is unsigned. Workbench 0.1.1 and later ask before
@@ -80,6 +80,13 @@ Windows build updating from `v0.1.1` to `v0.1.2` through the download stage.
 Open **Settings › Integrations › External MCP servers**, choose **RAPID**, and save your RAPID bearer credential.
 Use the connection check to see which tools your account can access. You can also open RAPID in a browser tab and
 add a run reference to a note.
+
+### Connect BioModel Portal
+
+Workbench v0.1.5 includes a **BioModel Portal** preset. Open **Settings › Integrations › External MCP servers**,
+select **BioModel Portal**, and use **Save token** to store your KBF sign-in token (`KBF_SSO_ACCESS_TOKEN`). Select
+**Test connection** to check the server connection and see how many MCP tools your account can access.
+Select the chat agent and model in the composer. To browse the model catalog, sign in to [BioModel Portal](https://biomodel.kbiofoundry.kr/).
 
 ## Screenshots
 

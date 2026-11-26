@@ -4,7 +4,7 @@
 
 [English](README.md) · **한국어**
 
-[사용 흐름](#기능) · [화면](#화면) · [라이선스](LICENSE)
+[사용 흐름](#기능) · [BioModel Portal](#biomodel-portal-연결) · [화면](#화면) · [라이선스](LICENSE)
 
 > Windows x64 설치 파일은 [최신 GitHub 릴리스](https://github.com/sblabkribb/biofoundry-workbench/releases/latest)에서 받으세요.
 > 설치 파일에 Windows 코드 서명이 없어 처음 설치할 때 SmartScreen 경고가 뜰 수 있습니다. 0.1.1부터는 업데이트를
@@ -76,6 +76,13 @@ GFP 발현 프로젝트에서 대화를 시작하고, 웹의 결과를 실험 �
 
 **설정 › 연동 › 외부 MCP 서버**에서 **RAPID**를 선택하고 RAPID에서 발급한 인증 정보를 저장합니다.
 **연결 확인**에서 계정으로 사용할 수 있는 도구를 확인합니다. 브라우저 탭에서 RAPID 실행 결과를 열고 노트에 실행 정보를 넣을 수도 있습니다.
+
+### BioModel Portal 연결
+
+Workbench v0.1.5에는 **BioModel Portal** 프리셋이 있습니다. **설정 › 연동 › 외부 MCP 서버**에서
+**BioModel Portal**을 선택하고 **토큰 저장**으로 KBF 로그인 토큰(`KBF_SSO_ACCESS_TOKEN`)을 저장합니다.
+**연결 확인**을 누르면 서버 연결 상태와 계정으로 접근 가능한 MCP 도구 수를 확인할 수 있습니다.
+대화에 쓸 에이전트와 모델은 입력창에서 고릅니다. 모델 목록은 로그인 후 [BioModel Portal](https://biomodel.kbiofoundry.kr/)에서 볼 수 있습니다.
 
 ## 화면
 
