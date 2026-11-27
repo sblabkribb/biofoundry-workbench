@@ -6,7 +6,23 @@
 
 ## Start here
 
-Install the Windows x64 app and open a vault. Choose **Open existing folder** to use an existing labnoteO vault, or **Create a new vault** to follow along in a test folder. To send a message, connect a model in **Settings › Integrations › AI provider** or choose a signed-in external agent from the chat composer. You can create notes and select references as soon as the vault opens.
+Install the Windows x64 app and open a vault. Choose **Open existing folder** to use an existing labnoteO vault, or **Create a new vault** to follow along in a test folder. You can create notes and select references as soon as the vault opens.
+
+### Connect your AI account
+
+Workbench v0.1.5 can use your ChatGPT or Google account in chat without entering a model API key in the app.
+
+1. Open **Settings › Integrations › External agents**. Turn on the agent you want and choose **Install** if the app offers it. The Codex and Claude Code integrations require Node.js 22 or later.
+2. Set up the agent using the instructions below, then choose **Test connection** in Workbench.
+3. In the chat composer, open **Workbench (built-in)** and select your agent. Use the adjacent model menu to choose among the models that agent makes available.
+
+| Agent in Workbench | How to connect |
+| --- | --- |
+| **Codex (ChatGPT)** | Install the Codex CLI if needed, run `codex login` in a terminal, and sign in with your ChatGPT account. Usage follows your account's Codex limits. [Codex CLI guide](https://developers.openai.com/codex/cli/) |
+| **Antigravity (Gemini)** | Install Google's Antigravity CLI and run `agy acp --login` in a terminal to sign in with Google. Restart Workbench if it cannot find a newly installed CLI. [Google sign-in guide](https://antigravity.google/docs/ide/extensions/acp/#authentication) |
+| **Claude Code** | Set the Windows environment variable `ANTHROPIC_API_KEY` before launching Workbench. Anthropic restricts Claude subscription sign-in to approved integrations. |
+
+To use a provider API key with **Workbench (built-in)**, add it in **Settings › Integrations › AI provider**.
 
 ## Walkthrough · Hand off a plate-reader review
 
@@ -100,7 +116,7 @@ https://github.com/user-attachments/assets/d023c484-3842-4f05-b276-6db92ba3cd57
 
 | When you want to… | In Workbench |
 | --- | --- |
-| Use a subscription | Open **Settings › Integrations › Agents**, follow the sign-in instructions for the agent, then select it in the composer. Codex uses your ChatGPT login. |
+| Change how you connect to AI | [Connect your AI account](#connect-your-ai-account). |
 | Keep a note visible beside chat | Leave it in the right tab panel or use the tab's pop-out button to open a separate window. |
 | Review an agent's proposed edit | Read the approval card before applying the edit. Complete any requested form in chat. |
 | Show the desktop pet | Use **Settings › Assistant › Show assistant**. In v0.1.5 the pet uses the active chat's AI connection and model. |

@@ -6,7 +6,23 @@
 
 ## 시작하기
 
-Windows x64 앱을 설치하고 보관함을 엽니다. labnoteO 보관함이 있으면 **기존 폴더 열기**, 연습할 폴더가 필요하면 **새 보관함 만들기**를 선택합니다. 채팅을 보내려면 **설정 › 연동 › AI 제공자**에서 모델을 연결하거나 대화 입력창에서 로그인한 외부 에이전트를 선택합니다. 보관함을 열면 노트 작성과 참고 자료 선택을 시작할 수 있습니다.
+Windows x64 앱을 설치하고 보관함을 엽니다. labnoteO 보관함이 있으면 **기존 폴더 열기**, 연습할 폴더가 필요하면 **새 보관함 만들기**를 선택합니다. 보관함을 열면 노트 작성과 참고 자료 선택을 시작할 수 있습니다.
+
+### AI 계정 연결하기
+
+Workbench v0.1.5에서는 앱에 모델 API 키를 입력할 필요 없이 ChatGPT 또는 Google 계정으로 대화할 수 있습니다.
+
+1. **설정 › 연동 › 외부 에이전트**에서 쓸 에이전트를 켭니다. **설치** 버튼이 표시되면 설치합니다. Codex와 Claude Code 연동에는 Node.js 22 이상이 필요합니다.
+2. 아래 표에 따라 계정을 연결하고 Workbench에서 **연결 확인**을 누릅니다.
+3. 대화 입력창의 **Workbench (기본)** 메뉴에서 에이전트를 선택합니다. 옆의 모델 메뉴에서 해당 에이전트가 제공하는 모델을 고를 수 있습니다.
+
+| Workbench에 표시되는 이름 | 연결 방법 |
+| --- | --- |
+| **Codex (ChatGPT)** | 필요하면 Codex CLI를 설치한 뒤 터미널에서 `codex login`을 실행해 ChatGPT 계정으로 로그인합니다. 사용량은 계정의 Codex 한도를 따릅니다. [Codex CLI 안내](https://developers.openai.com/codex/cli/) |
+| **Antigravity (Gemini)** | Google의 Antigravity CLI를 설치하고 터미널에서 `agy acp --login`을 실행해 Google 계정으로 로그인합니다. 새로 설치한 CLI를 앱에서 찾지 못하면 Workbench를 다시 시작합니다. [Google 로그인 안내](https://antigravity.google/docs/ide/extensions/acp/#authentication) |
+| **Claude Code** | Workbench를 실행하기 전에 Windows 환경 변수 `ANTHROPIC_API_KEY`를 설정합니다. Claude 구독 로그인은 Anthropic이 승인한 연동에 한해 사용할 수 있습니다. |
+
+**Workbench (기본)**으로 API 키를 사용하는 경우 **설정 › 연동 › AI 제공자**에서 키를 등록합니다.
 
 ## 따라 하기 · 플레이트 판독 검토 인수인계
 
@@ -100,7 +116,7 @@ https://github.com/user-attachments/assets/cfc7bfac-c36e-4ea1-9c09-443d7073fa85
 
 | 하고 싶은 일 | Workbench에서 |
 | --- | --- |
-| 구독 계정으로 대화하기 | **설정 › 연동 › 에이전트**에서 로그인 안내를 따른 뒤 입력창에서 에이전트를 고릅니다. Codex는 ChatGPT 계정으로 연결합니다. |
+| AI 연결 방식 바꾸기 | [AI 계정 연결하기](#ai-계정-연결하기)를 참고합니다. |
 | 대화 옆에 노트 띄우기 | 오른쪽 탭에서 노트를 보거나 탭의 분리 버튼으로 별도 창에 엽니다. |
 | 에이전트가 제안한 편집 검토하기 | 승인 카드의 변경 내용부터 확인합니다. 추가 정보는 대화의 양식 카드에 채웁니다. |
 | 바탕화면 펫 쓰기 | **설정 › 어시스턴트 › 어시스턴트 보이기**에서 켭니다. v0.1.5의 펫은 현재 대화의 AI 연결과 모델을 사용합니다. |
