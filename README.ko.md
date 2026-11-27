@@ -54,6 +54,8 @@ https://github.com/user-attachments/assets/6bfbc941-fc52-432d-9a68-d435af742082
 
 [MP4 보기](docs/media/walkthrough/ko/02-workflow.mp4)
 
+**브라우저에서 기존 설계 검토하기.** 오른쪽 패널에서 **새 브라우저 탭**을 열고 **bfworkflow** 바로 가기를 선택하거나 사이트 주소를 입력합니다. 필요하면 로그인합니다. 저장된 설계를 열어 Unit Operation을 확인하고, **요소 선택(Ctrl+Shift+S)**으로 검토 기준을 대화에 첨부합니다. **노트에 넣기**를 누르면 선택한 내용과 출처 링크를 실험 노트에 남길 수 있습니다. [bfworkflow 열기](https://workflow.kbiofoundry.kr/)
+
 ### 3. PartBank에서 참조 항목 찾기
 
 **설정 › 연동 › 연구 서비스 › partbank**에서 서버 또는 데스크톱 앱의 주소와 API 키를 저장하고 **검색에 쓸 연결**을 고릅니다. API 키는 PartBank의 **Profile › API Keys**에서 발급합니다. [PartBank 열기](https://partbank.kbiofoundry.kr/)
@@ -63,6 +65,8 @@ https://github.com/user-attachments/assets/6bfbc941-fc52-432d-9a68-d435af742082
 https://github.com/user-attachments/assets/805aa4c9-4a70-4361-8a62-48f6fc2c556b
 
 [MP4 보기](docs/media/walkthrough/ko/03-partbank.mp4)
+
+**브라우저에서 원본 항목 확인하기.** **새 브라우저 탭**에서 **PartBank** 바로 가기를 선택하거나 사이트 주소를 입력하고 필요하면 로그인합니다. 참조할 항목을 검색해 원본을 연 뒤 **요소 선택(Ctrl+Shift+S)**으로 항목의 KID를 골라 대화에 첨부합니다. 노트에 남기려면 **노트에 넣기**를 누르고, Workbench가 KID를 인식하면 **샘플 참조로 넣기 (PartBank)**를 고릅니다. [PartBank 열기](https://partbank.kbiofoundry.kr/)
 
 ### 4. 랩샘플을 노트에서 사용하기
 

@@ -54,6 +54,8 @@ https://github.com/user-attachments/assets/3b430350-d0a7-43e1-a078-87aa097c5711
 
 [MP4](docs/media/walkthrough/en/02-workflow.mp4)
 
+**Review a saved design in the browser.** Open a **New browser tab** in the right panel and choose the **bfworkflow** shortcut or enter the site address. Sign in if prompted. Open a saved design, review its Unit Operations, and use **Select element (Ctrl+Shift+S)** to bring a review criterion into the chat. Choose **Insert into note** to save the selection and its source link in the experiment note. [Open bfworkflow](https://workflow.kbiofoundry.kr/)
+
 ### 3. Find the PartBank reference
 
 Set your **partbank server** or **partbank desktop app** address and API key under **Settings › Integrations › Research services › partbank**, then set **Connection to search**. PartBank issues keys under **Profile › API Keys**. [Open PartBank](https://partbank.kbiofoundry.kr/)
@@ -63,6 +65,8 @@ Open **Samples › partbank**, search for the reference, and choose **Import as 
 https://github.com/user-attachments/assets/deefbcb6-0fac-4378-889c-8344be332f92
 
 [MP4](docs/media/walkthrough/en/03-partbank.mp4)
+
+**Check the original record in the browser.** Open a **New browser tab**, choose the **PartBank** shortcut or enter the site address, and sign in if prompted. Search for the reference and open its record. Use **Select element (Ctrl+Shift+S)** on the record's KID to attach it to the chat. To keep it in a note, choose **Insert into note**, then **Insert as sample reference (PartBank)** if Workbench recognizes the KID. [Open PartBank](https://partbank.kbiofoundry.kr/)
 
 ### 4. Use the lab sample in a note
 
