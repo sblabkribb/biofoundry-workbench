@@ -12,7 +12,7 @@ Windows x64 앱을 설치하고 보관함을 엽니다. labnoteO 보관함이 �
 
 동료가 남긴 플레이트 판독 기록을 검토한다고 가정합니다. 인수인계용 실험을 만들고 Workflow와 Unit Operation을 추가한 뒤, 샘플과 이전 대화의 결정 사항, 웹 보고서의 근거를 한 프로젝트에 모읍니다. 영상은 독립된 데모 보관함과 합성 기록을 사용합니다.
 
-[![전체 영상](docs/media/walkthrough/ko/01-project.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/)
+https://github.com/user-attachments/assets/38fd21c1-3e3c-42f1-acd3-e2e1c6e677e0
 
 [전체 MP4](docs/media/walkthrough/ko/walkthrough.mp4)
 
@@ -24,7 +24,7 @@ BioModel Portal과 RAPID의 연결 위치를 보여줍니다. RAPID 인용에는
 
 사이드바에서 **새 프로젝트**를 만듭니다. 프로젝트를 펼치고 **새 실험**을 누르면 실험의 README 노트가 오른쪽에 열립니다. **이 프로젝트에서 새 대화**로 프로젝트에 속한 채팅을 시작할 수 있습니다.
 
-[![프로젝트와 실험 만들기](docs/media/walkthrough/ko/01-project.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#project)
+https://github.com/user-attachments/assets/d8238762-e8f2-4c66-8e19-39bb25a24922
 
 [MP4 보기](docs/media/walkthrough/ko/01-project.mp4)
 
@@ -34,7 +34,7 @@ BioModel Portal과 RAPID의 연결 위치를 보여줍니다. RAPID 인용에는
 
 팀의 템플릿을 가져오려면 **설정 › 연동 › 연구 서비스 › bfworkflow**에서 서버나 데스크톱 앱을 고르고 API 키를 저장합니다. **Ctrl+P → bfworkflow 카탈로그 동기화하기**로 변경 사항을 확인합니다. 기존 노트는 **bfworkflow 설계에서 노트 만들기 → bfworkflow에 저장된 노트 쓰기**로 실험에 가져올 수 있습니다. [bfworkflow 열기](https://workflow.kbiofoundry.kr/)
 
-[![Workflow와 Unit Operation 만들기](docs/media/walkthrough/ko/02-workflow.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#workflow)
+https://github.com/user-attachments/assets/6bfbc941-fc52-432d-9a68-d435af742082
 
 [MP4 보기](docs/media/walkthrough/ko/02-workflow.mp4)
 
@@ -44,7 +44,7 @@ BioModel Portal과 RAPID의 연결 위치를 보여줍니다. RAPID 인용에는
 
 **샘플 › partbank**에서 참조 항목을 찾아 **샘플로 가져오기**를 누릅니다. 같은 검색 결과에서 PartBank 원본을 열어 확인할 수 있습니다.
 
-[![PartBank에서 참조 항목 찾기](docs/media/walkthrough/ko/03-partbank.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#partbank)
+https://github.com/user-attachments/assets/805aa4c9-4a70-4361-8a62-48f6fc2c556b
 
 [MP4 보기](docs/media/walkthrough/ko/03-partbank.mp4)
 
@@ -52,7 +52,7 @@ BioModel Portal과 RAPID의 연결 위치를 보여줍니다. RAPID 인용에는
 
 Workflow 노트를 열어 둔 상태에서 샘플을 등록하고 **삽입**을 누릅니다. 나중에 다시 쓰려면 **샘플**에서 해당 항목을 우클릭하고 **참조 삽입**을 선택합니다. 노트에는 샘플 ID와 별칭이 함께 남습니다.
 
-[![랩샘플을 노트에서 사용하기](docs/media/walkthrough/ko/04-sample.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#sample)
+https://github.com/user-attachments/assets/56d5de8d-161d-4af8-a601-dd4932fd51ed
 
 [MP4 보기](docs/media/walkthrough/ko/04-sample.mp4)
 
@@ -60,7 +60,7 @@ Workflow 노트를 열어 둔 상태에서 샘플을 등록하고 **삽입**을 
 
 새 프로젝트 대화에서 **@**를 입력하거나 **+**를 누릅니다. **대화**에서 이전 대화를 골라 붙입니다. 관련 Workflow나 Unit Operation도 함께 첨부할 수 있습니다. 메시지를 보내기 전에 입력창 아래에서 첨부 항목을 확인합니다.
 
-[![다른 Workflow의 대화 다시 쓰기](docs/media/walkthrough/ko/05-reuse.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#reuse)
+https://github.com/user-attachments/assets/77c641fb-3e28-463f-a910-8a93fc4af592
 
 [MP4 보기](docs/media/walkthrough/ko/05-reuse.mp4)
 
@@ -68,7 +68,7 @@ Workflow 노트를 열어 둔 상태에서 샘플을 등록하고 **삽입**을 
 
 노트에서 필요한 문단만 드래그한 뒤 **선택한 텍스트 첨부**를 누릅니다. 대화 메시지에서도 같은 방법으로 문장을 고릅니다. 입력창에 두 선택이 모두 붙으면 그 부분을 중심으로 질문할 수 있습니다.
 
-[![랩노트와 대화에서 선택한 부분 첨부하기](docs/media/walkthrough/ko/06-selection.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#selection)
+https://github.com/user-attachments/assets/259f869d-2d2d-48aa-bae3-05de0910316a
 
 [MP4 보기](docs/media/walkthrough/ko/06-selection.mp4)
 
@@ -76,7 +76,7 @@ Workflow 노트를 열어 둔 상태에서 샘플을 등록하고 **삽입**을 
 
 Workbench의 브라우저 탭에서 보고서를 엽니다. 문장을 선택하고 **선택한 텍스트 첨부**를 누르거나, **Ctrl+Shift+S**로 요소나 영역을 고릅니다. 출처를 노트에 남길 때는 **노트에 넣기**를 선택합니다.
 
-[![브라우저에서 고른 결과를 대화에 첨부하기](docs/media/walkthrough/ko/07-browser.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#browser)
+https://github.com/user-attachments/assets/814d82c3-b7a4-485c-9ebe-88be67e4cc29
 
 [MP4 보기](docs/media/walkthrough/ko/07-browser.mp4)
 
@@ -84,7 +84,7 @@ Workbench의 브라우저 탭에서 보고서를 엽니다. 문장을 선택하�
 
 **설정 › 연동 › 외부 MCP 서버 › BioModel Portal**에서 KBF 로그인 토큰을 **토큰 저장**으로 등록하고 **연결 확인**을 누릅니다. 연결된 서버와 계정으로 접근 가능한 도구 수가 표시됩니다. 모델 목록은 포털에 로그인해 확인합니다. [BioModel Portal 열기](https://biomodel.kbiofoundry.kr/)
 
-[![BioModel Portal 연결 위치 찾기](docs/media/walkthrough/ko/08-biomodel.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#biomodel)
+https://github.com/user-attachments/assets/d69627d9-fa85-49a7-abe0-abe7a8d5ebc7
 
 [MP4 보기](docs/media/walkthrough/ko/08-biomodel.mp4)
 
@@ -92,7 +92,7 @@ Workbench의 브라우저 탭에서 보고서를 엽니다. 문장을 선택하�
 
 **설정 › 연동 › 외부 MCP 서버 › RAPID**에서 RAPID의 **MCP** 탭에서 발급한 키 또는 KBF 로그인 토큰을 저장하고 **연결 확인**을 누릅니다. Workbench 브라우저에서 기존 실행 결과를 열고 필요한 부분을 고릅니다. 실행 ID가 인식되면 **노트에 넣기 › RAPID 실행 넣기**로 ID와 출처를 검토 기록에 남깁니다. [RAPID 열기](https://rapid.kbiofoundry.kr/)
 
-[![RAPID 연결과 기존 실행 인용](docs/media/walkthrough/ko/09-rapid.jpg)](https://sblabkribb.github.io/biofoundry-workbench/ko/#rapid)
+https://github.com/user-attachments/assets/cfc7bfac-c36e-4ea1-9c09-443d7073fa85
 
 [MP4 보기](docs/media/walkthrough/ko/09-rapid.mp4)
 

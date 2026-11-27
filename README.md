@@ -12,7 +12,7 @@ Install the Windows x64 app and open a vault. Choose **Open existing folder** to
 
 You are picking up a plate-reader review from a colleague. Create an experiment for the handoff, fill in its Workflow and Unit Operation, then bring the sample, previous decisions, and sources into the same project. The footage uses an isolated Workbench vault and synthetic records.
 
-[![Full walkthrough](docs/media/walkthrough/en/01-project.jpg)](https://sblabkribb.github.io/biofoundry-workbench/)
+https://github.com/user-attachments/assets/f3489e60-7872-444c-bff0-0374eb12362b
 
 [Full MP4](docs/media/walkthrough/en/walkthrough.mp4)
 
@@ -24,7 +24,7 @@ The clips show where to connect BioModel Portal and RAPID. The RAPID citation us
 
 Choose **New project** in the sidebar and name it after the work. Expand the project and choose **New experiment**. Workbench opens the experiment's README note in the right panel. Use **New chat in this project** when you want a conversation that belongs to that project.
 
-[![Start a project and experiment](docs/media/walkthrough/en/01-project.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#project)
+https://github.com/user-attachments/assets/19e38783-6c9d-4161-a3f1-965105342d4e
 
 [MP4](docs/media/walkthrough/en/01-project.mp4)
 
@@ -34,7 +34,7 @@ In the experiment note, choose **Add workflow**, pick a catalog entry, and give 
 
 To bring your team's templates in, use **Settings › Integrations › Research services › bfworkflow**. Choose the server or desktop app and save its API key. From **Ctrl+P**, run **Sync catalogs from bfworkflow** and review the changes. Use **Create notes from a bfworkflow design** and **Use the notes saved in bfworkflow** to bring existing notes into the experiment. [Open bfworkflow](https://workflow.kbiofoundry.kr/)
 
-[![Build the Workflow and Unit Operation](docs/media/walkthrough/en/02-workflow.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#workflow)
+https://github.com/user-attachments/assets/3b430350-d0a7-43e1-a078-87aa097c5711
 
 [MP4](docs/media/walkthrough/en/02-workflow.mp4)
 
@@ -44,7 +44,7 @@ Set your **partbank server** or **partbank desktop app** address and API key und
 
 Open **Samples › partbank**, search for the reference, and choose **Import as sample**. Check the source record from the same result before you use it in the review.
 
-[![Find a PartBank reference](docs/media/walkthrough/en/03-partbank.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#partbank)
+https://github.com/user-attachments/assets/deefbcb6-0fac-4378-889c-8344be332f92
 
 [MP4](docs/media/walkthrough/en/03-partbank.mp4)
 
@@ -52,7 +52,7 @@ Open **Samples › partbank**, search for the reference, and choose **Import as 
 
 With the Workflow note open, accept the **Insert** prompt after registering the sample. To reuse it later, right-click the sample in **Samples** and select **Insert reference**. Workbench records the sample ID and alias in the note.
 
-[![Reference a lab sample](docs/media/walkthrough/en/04-sample.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#sample)
+https://github.com/user-attachments/assets/ffae2c6d-017a-441d-b62d-a2d88718eacd
 
 [MP4](docs/media/walkthrough/en/04-sample.mp4)
 
@@ -60,7 +60,7 @@ With the Workflow note open, accept the **Insert** prompt after registering the 
 
 Open a new project chat and type **@** or select **+**. Choose the earlier conversation from **Conversations**. You can also attach the relevant Workflow or Unit Operation. Check the chips above the composer before sending your question.
 
-[![Reuse an earlier Workflow chat](docs/media/walkthrough/en/05-reuse.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#reuse)
+https://github.com/user-attachments/assets/9e0eb2d7-a8df-44d7-aa96-7add3b46dd3b
 
 [MP4](docs/media/walkthrough/en/05-reuse.mp4)
 
@@ -68,7 +68,7 @@ Open a new project chat and type **@** or select **+**. Choose the earlier conve
 
 Highlight the specific paragraph in the note and choose **Attach selected text**. Repeat with a passage in a chat message. Workbench puts each selected passage in the composer so you can ask about those details together.
 
-[![Attach selections from the note and chat](docs/media/walkthrough/en/06-selection.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#selection)
+https://github.com/user-attachments/assets/7ca46dc1-24e8-4381-a6ed-a65bce5a4ff0
 
 [MP4](docs/media/walkthrough/en/06-selection.mp4)
 
@@ -76,7 +76,7 @@ Highlight the specific paragraph in the note and choose **Attach selected text**
 
 Open the saved report in a Workbench browser tab. Select the relevant passage and use **Attach selected text**, or use **Ctrl+Shift+S** to pick an element or area. Choose **Insert into note** if you want to save the selected result with its source link.
 
-[![Bring a browser result into chat](docs/media/walkthrough/en/07-browser.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#browser)
+https://github.com/user-attachments/assets/c288282c-1e8b-4484-90af-9b604a84bb3c
 
 [MP4](docs/media/walkthrough/en/07-browser.mp4)
 
@@ -84,7 +84,7 @@ Open the saved report in a Workbench browser tab. Select the relevant passage an
 
 Open **Settings › Integrations › External MCP servers › BioModel Portal**. Use **Save token** with your KBF sign-in token and select **Test connection**. The check reports the server and tool count for your account. Browse the model catalog after signing in to the portal. [Open BioModel Portal](https://biomodel.kbiofoundry.kr/)
 
-[![Find the BioModel Portal connection](docs/media/walkthrough/en/08-biomodel.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#biomodel)
+https://github.com/user-attachments/assets/fedc8b44-da8d-46f0-930a-9898092172b1
 
 [MP4](docs/media/walkthrough/en/08-biomodel.mp4)
 
@@ -92,7 +92,7 @@ Open **Settings › Integrations › External MCP servers › BioModel Portal**.
 
 Open **Settings › Integrations › External MCP servers › RAPID**. Save a key from the RAPID **MCP** tab or a KBF sign-in token, then select **Test connection**. Open an existing run in the Workbench browser. Pick the result and choose **Insert into note › Insert RAPID run** when its run ID is recognized. Keep the ID and source alongside the review. [Open RAPID](https://rapid.kbiofoundry.kr/)
 
-[![Connect RAPID and cite a run](docs/media/walkthrough/en/09-rapid.jpg)](https://sblabkribb.github.io/biofoundry-workbench/#rapid)
+https://github.com/user-attachments/assets/d023c484-3842-4f05-b276-6db92ba3cd57
 
 [MP4](docs/media/walkthrough/en/09-rapid.mp4)
 
