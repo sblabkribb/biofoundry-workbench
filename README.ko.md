@@ -1,140 +1,110 @@
 # Biofoundry Workbench
 
-**프로젝트 단위로 AI 에이전트와 대화하고, 연구노트를 탭으로 열고, 바이오파운드리 도구를 플러그인으로 붙이는 데스크톱 연구 워크벤치.**
+**실험을 계획하고, 팀의 기록을 다시 쓰고, 결과의 근거를 연구노트에 남깁니다.**
 
-[English](README.md) · **한국어**
+[English](README.md) · **한국어** · [Windows 다운로드](https://github.com/sblabkribb/biofoundry-workbench/releases/latest) · [전체 영상 보기](https://sblabkribb.github.io/biofoundry-workbench/ko/)
 
-[사용 흐름](#기능) · [화면](#화면) · [라이선스](LICENSE)
+## 시작하기
 
-[PartBank](#partbank-연결) · [RAPID](#rapid-연결) · [Workflow](#workflow-연결-bfworkflow) · [BioModel Portal](#biomodel-portal-연결)
+Windows x64 앱을 설치하고 보관함을 엽니다. labnoteO 보관함이 있으면 **기존 폴더 열기**, 연습할 폴더가 필요하면 **새 보관함 만들기**를 선택합니다. 채팅을 보내려면 **설정 › 연동 › AI 제공자**에서 모델을 연결하거나 대화 입력창에서 로그인한 외부 에이전트를 선택합니다. 보관함을 열면 노트 작성과 참고 자료 선택을 시작할 수 있습니다.
 
-> Windows x64 설치 파일은 [최신 GitHub 릴리스](https://github.com/sblabkribb/biofoundry-workbench/releases/latest)에서 받으세요.
-> 설치 파일에 Windows 코드 서명이 없어 처음 설치할 때 SmartScreen 경고가 뜰 수 있습니다. 0.1.1부터는 업데이트를
-> 설치하기 전에 앱에서 확인을 요청합니다. 더 오래된 빌드를 사용 중이면 최신 버전을 한 번 덮어 설치하세요.
+## 따라 하기 · 플레이트 판독 검토 인수인계
 
-## 소개
+동료가 남긴 플레이트 판독 기록을 검토한다고 가정합니다. 인수인계용 실험을 만들고 Workflow와 Unit Operation을 추가한 뒤, 샘플과 이전 대화의 결정 사항, 웹 보고서의 근거를 한 프로젝트에 모읍니다. 영상은 독립된 데모 보관함과 합성 기록을 사용합니다.
 
-Biofoundry Workbench는 LLM 채팅 앱처럼 배치한 Windows 데스크톱 앱(Tauri 2 + React)으로, 바이오파운드리 연구 업무용입니다.
+https://github.com/user-attachments/assets/38fd21c1-3e3c-42f1-acd3-e2e1c6e677e0
 
-- **프로젝트.** 왼쪽 사이드바에서 실험을 프로젝트로 묶습니다. 프로젝트마다 대화와 연구노트(실험)가 있고, 프로젝트가 없는
-  실험은 "프로젝트 없음"에 모입니다.
-- **프로젝트 대화.** 가운데는 AI 에이전트와의 대화입니다. 지금 고른 프로젝트와 열린 노트가 에이전트에게 맥락으로 전달됩니다.
-  도구 호출은 카드로 보이고, 노트를 바꾸는 작업은 먼저 허락을 받습니다. 에이전트는 작은 입력 양식 카드(A2UI)로 필요한 값을
-  물을 수도 있고, 그 카드는 대화 안에서 바로 채워 제출합니다. 설정에서 켠 외부 코딩 에이전트(ACP로 붙는 DeepSeek
-  Harness, Claude Code)로 대화를 돌릴 수도 있습니다.
-- **연구노트 탭.** 노트는 오른쪽 탭 패널에 열립니다. 여러 탭을 동시에 열 수 있고, 탭을 바꿔도 되돌리기 기록과 스크롤 위치가
-  유지됩니다.
-- **내장 브라우저.** 웹 페이지를 브라우저 탭에서 열고, PartBank, bfworkflow, RAPID 바로가기가 있습니다. 페이지의 요소나
-  영역을 골라 대화에 첨부하거나 **노트에 넣기**로 노트에 바로 넣을 수 있고, 도우미는 허용한 사이트만 읽으며 클릭·입력은
-  매번 승인한 뒤에만 합니다.
-- **대화별 참고 자료와 모델.** "+"나 `@`로 다른 대화, 실험 폴더, 워크플로, 유닛 오퍼레이션, 노트, 브라우저에서 고른 요소를
-  대화에 첨부하고, 머리글에서 대화를 바꾸고 대화마다 모델을 고릅니다.
-- **창 분리.** 어떤 탭이든 별도 창으로 떼어낼 수 있습니다. 예를 들어 노트는 한 창, 플러그인 화면은 다른 창에 둘 수 있고,
-  분리한 창에서 고친 내용은 메인 창에도 반영됩니다.
-- **데스크톱 펫.** labnoteO Desktop의 펫은 Workbench에서 기본적으로 숨겨져 있습니다. **설정 › 어시스턴트 › 어시스턴트 보이기**를
-  켜거나 왼쪽 리본의 로봇 버튼을 누르면 나타납니다.
-- **플러그인.** 분야별 도구는 버전이 있는 작은 SDK에 맞춰 각자의 저장소에서 개발하는 플러그인으로 붙입니다. 플러그인은
-  사이드바 항목, 탭에 열리는 화면, 에이전트가 쓰는 도구, 설정 페이지를 더할 수 있습니다. 이 버전에는 예제 플러그인이 들어 있습니다.
+[전체 MP4](docs/media/walkthrough/ko/walkthrough.mp4)
 
-노트 편집기, 실험 구조(Workflow, Unit Operation), 샘플, 파일, 검색, 어시스턴트 도구는 이 앱의 기반인 labnoteO Desktop에서
-가져왔습니다.
+BioModel Portal과 RAPID의 연결 위치를 보여줍니다. RAPID 인용에는 합성 실행 기록을 사용합니다. 실제 접속에는 각 서비스의 인증 정보가 필요합니다.
 
-## 기능
+[프로젝트 시작](#1-프로젝트와-실험-만들기) · [workflow 만들기](#2-workflow와-unit-operation-만들기) · [PartBank 찾기](#3-partbank에서-참조-항목-찾기) · [랩샘플 사용](#4-랩샘플을-노트에서-사용하기) · [이전 대화 재사용](#5-다른-workflow의-대화-다시-쓰기) · [선택한 텍스트 첨부](#6-랩노트와-대화에서-선택한-부분-첨부하기) · [브라우저에서 첨부](#7-브라우저에서-고른-결과를-대화에-첨부하기) · [BioModel Portal](#8-biomodel-portal-연결-확인) · [RAPID](#9-기존-rapid-실행을-노트에-인용하기)
 
-### 프로젝트 대화에서 연구노트까지
+### 1. 프로젝트와 실험 만들기
 
-GFP 발현 프로젝트에서 대화를 시작하고, 웹의 결과를 실험 노트에 남기는 예입니다. 영상은 데모 보관함과 예시 응답으로 찍었습니다.
+사이드바에서 **새 프로젝트**를 만듭니다. 프로젝트를 펼치고 **새 실험**을 누르면 실험의 README 노트가 오른쪽에 열립니다. **이 프로젝트에서 새 대화**로 프로젝트에 속한 채팅을 시작할 수 있습니다.
 
-**1. 보관함을 열고 프로젝트에서 대화를 시작합니다.** labnoteO 보관함을 연 뒤 왼쪽 사이드바에서 프로젝트를 고릅니다.
-**설정 › 연동 › AI 제공자**에서 모델을 연결하고, 대화에서 사용할 실험 폴더와 모델을 고릅니다.
+https://github.com/user-attachments/assets/d8238762-e8f2-4c66-8e19-39bb25a24922
 
-**2. 질문에 필요한 기록을 첨부합니다.** **+** 또는 **@**로 이전 대화, 노트, Workflow, Unit Operation을 붙입니다.
-첨부는 칩으로 표시되며 메시지를 보낼 때 참고 자료를 다시 읽습니다.
+[MP4 보기](docs/media/walkthrough/ko/01-project.mp4)
 
-**3. 웹에서 찾은 결과를 실험에 남깁니다.** 브라우저 탭에서 출처를 열고 **Ctrl+Shift+S**를 누릅니다.
-필요한 결과 표를 고른 뒤 **노트에 넣기**를 누르면 표와 출처 링크가 함께 들어갑니다.
-채팅에서 키워드로 웹을 검색하려면 **설정 › 어시스턴트 › 웹 검색 주소**에서 SearXNG 서버를 연결합니다.
-서버에 연결된 검색 엔진이 색인한 공개 사이트가 결과에 포함됩니다.
+### 2. Workflow와 Unit Operation 만들기
 
-**4. 에이전트가 제안한 다음 작업을 확인합니다.** 필요한 정보는 대화 안의 양식 카드에 채웁니다.
-외부 에이전트가 노트를 고치려면 승인 카드에서 수정 내용을 먼저 확인합니다.
+실험 노트에서 **Workflow 추가**를 누릅니다. 카탈로그에서 항목을 고르고 이름을 붙인 뒤, 열린 Workflow에서 **UO 추가**를 눌러 실제로 기록할 단계를 만듭니다. 영상에서는 기존 장비 보고서를 검토하는 단계를 추가합니다.
 
-**5. 앱을 최신으로 유지합니다.** Workbench를 열면 공개 릴리스를 확인하고 백그라운드에서 내려받습니다.
-다운로드가 끝나면 왼쪽 아래 **업데이트**를 누릅니다. 영상 마지막에는 공개 Windows 빌드 `v0.1.1`이 `v0.1.2`를
-내려받는 과정이 나옵니다.
+팀의 템플릿을 가져오려면 **설정 › 연동 › 연구 서비스 › bfworkflow**에서 서버나 데스크톱 앱을 고르고 API 키를 저장합니다. **Ctrl+P → bfworkflow 카탈로그 동기화하기**로 변경 사항을 확인합니다. 기존 노트는 **bfworkflow 설계에서 노트 만들기 → bfworkflow에 저장된 노트 쓰기**로 실험에 가져올 수 있습니다. [bfworkflow 열기](https://workflow.kbiofoundry.kr/)
 
-[한국어 전체 영상 보기](https://sblabkribb.github.io/biofoundry-workbench/ko/) · [MP4](docs/media/research-workflow.ko.mp4)
+https://github.com/user-attachments/assets/6bfbc941-fc52-432d-9a68-d435af742082
 
-| 시간 | 내용 |
+[MP4 보기](docs/media/walkthrough/ko/02-workflow.mp4)
+
+### 3. PartBank에서 참조 항목 찾기
+
+**설정 › 연동 › 연구 서비스 › partbank**에서 서버 또는 데스크톱 앱의 주소와 API 키를 저장하고 **검색에 쓸 연결**을 고릅니다. API 키는 PartBank의 **Profile › API Keys**에서 발급합니다. [PartBank 열기](https://partbank.kbiofoundry.kr/)
+
+**샘플 › partbank**에서 참조 항목을 찾아 **샘플로 가져오기**를 누릅니다. 같은 검색 결과에서 PartBank 원본을 열어 확인할 수 있습니다.
+
+https://github.com/user-attachments/assets/805aa4c9-4a70-4361-8a62-48f6fc2c556b
+
+[MP4 보기](docs/media/walkthrough/ko/03-partbank.mp4)
+
+### 4. 랩샘플을 노트에서 사용하기
+
+Workflow 노트를 열어 둔 상태에서 샘플을 등록하고 **삽입**을 누릅니다. 나중에 다시 쓰려면 **샘플**에서 해당 항목을 우클릭하고 **참조 삽입**을 선택합니다. 노트에는 샘플 ID와 별칭이 함께 남습니다.
+
+https://github.com/user-attachments/assets/56d5de8d-161d-4af8-a601-dd4932fd51ed
+
+[MP4 보기](docs/media/walkthrough/ko/04-sample.mp4)
+
+### 5. 다른 Workflow의 대화 다시 쓰기
+
+새 프로젝트 대화에서 **@**를 입력하거나 **+**를 누릅니다. **대화**에서 이전 대화를 골라 붙입니다. 관련 Workflow나 Unit Operation도 함께 첨부할 수 있습니다. 메시지를 보내기 전에 입력창 아래에서 첨부 항목을 확인합니다.
+
+https://github.com/user-attachments/assets/77c641fb-3e28-463f-a910-8a93fc4af592
+
+[MP4 보기](docs/media/walkthrough/ko/05-reuse.mp4)
+
+### 6. 랩노트와 대화에서 선택한 부분 첨부하기
+
+노트에서 필요한 문단만 드래그한 뒤 **선택한 텍스트 첨부**를 누릅니다. 대화 메시지에서도 같은 방법으로 문장을 고릅니다. 입력창에 두 선택이 모두 붙으면 그 부분을 중심으로 질문할 수 있습니다.
+
+https://github.com/user-attachments/assets/259f869d-2d2d-48aa-bae3-05de0910316a
+
+[MP4 보기](docs/media/walkthrough/ko/06-selection.mp4)
+
+### 7. 브라우저에서 고른 결과를 대화에 첨부하기
+
+Workbench의 브라우저 탭에서 보고서를 엽니다. 문장을 선택하고 **선택한 텍스트 첨부**를 누르거나, **Ctrl+Shift+S**로 요소나 영역을 고릅니다. 출처를 노트에 남길 때는 **노트에 넣기**를 선택합니다.
+
+https://github.com/user-attachments/assets/814d82c3-b7a4-485c-9ebe-88be67e4cc29
+
+[MP4 보기](docs/media/walkthrough/ko/07-browser.mp4)
+
+### 8. BioModel Portal 연결 확인
+
+**설정 › 연동 › 외부 MCP 서버 › BioModel Portal**에서 KBF 로그인 토큰을 **토큰 저장**으로 등록하고 **연결 확인**을 누릅니다. 연결된 서버와 계정으로 접근 가능한 도구 수가 표시됩니다. 모델 목록은 포털에 로그인해 확인합니다. [BioModel Portal 열기](https://biomodel.kbiofoundry.kr/)
+
+https://github.com/user-attachments/assets/d69627d9-fa85-49a7-abe0-abe7a8d5ebc7
+
+[MP4 보기](docs/media/walkthrough/ko/08-biomodel.mp4)
+
+### 9. 기존 RAPID 실행을 노트에 인용하기
+
+**설정 › 연동 › 외부 MCP 서버 › RAPID**에서 RAPID의 **MCP** 탭에서 발급한 키 또는 KBF 로그인 토큰을 저장하고 **연결 확인**을 누릅니다. Workbench 브라우저에서 기존 실행 결과를 열고 필요한 부분을 고릅니다. 실행 ID가 인식되면 **노트에 넣기 › RAPID 실행 넣기**로 ID와 출처를 검토 기록에 남깁니다. [RAPID 열기](https://rapid.kbiofoundry.kr/)
+
+https://github.com/user-attachments/assets/cfc7bfac-c36e-4ea1-9c09-443d7073fa85
+
+[MP4 보기](docs/media/walkthrough/ko/09-rapid.mp4)
+
+## 자주 쓰는 기능
+
+| 하고 싶은 일 | Workbench에서 |
 | --- | --- |
-| 0:00 | 프로젝트 대화 시작 |
-| 0:14 | 실험 참고 자료 첨부 |
-| 0:29 | 웹 결과와 출처를 노트에 기록 |
-| 0:43 | 대화에서 양식 제출 |
-| 0:56 | 외부 에이전트의 수정 검토 |
-| 1:10 | Workbench 업데이트 다운로드 |
-
-### PartBank 연결
-
-**설정 › 연동 › 연구 서비스 › partbank**에서 **partbank 서버** 또는 **partbank 데스크톱 앱**의 주소와 API 키를 저장하고,
-**검색에 쓸 연결**에서 해당 연결을 고릅니다. API 키는 PartBank의 **Profile › API Keys**에서 발급합니다.
-[PartBank 열기](https://partbank.kbiofoundry.kr/)
-
-Workbench 사이드바의 **샘플 › partbank**에서 기존 항목을 찾아 **샘플로 가져오기**를 누릅니다.
-검색 결과에서 PartBank의 원본 항목도 열 수 있습니다.
-
-### RAPID 연결
-
-**설정 › 연동 › 외부 MCP 서버 › RAPID**에서 RAPID의 **MCP** 탭에서 발급한 API 키 또는 KBF 로그인 토큰을
-**토큰 저장**으로 등록하고 **연결 확인**을 누릅니다. [RAPID 열기](https://rapid.kbiofoundry.kr/)
-
-기존 실행 결과를 인용하려면 Workbench의 브라우저 탭에서 열고 **Ctrl+Shift+S**로 필요한 영역을 고릅니다.
-**노트에 넣기**에서 Workbench가 실행을 인식하면 **RAPID 실행 넣기**를 선택해 실행 ID와 출처 링크를 남깁니다.
-
-### Workflow 연결 (bfworkflow)
-
-**설정 › 연동 › 연구 서비스 › bfworkflow**에서 **서버** 또는 **bfworkflow 데스크톱 앱**을 고릅니다.
-서버를 고른 경우 서버 주소를 입력합니다. 선택한 연결의 API 키를 저장합니다. 웹에서는 **프로필 › API 키**에서 발급합니다.
-[bfworkflow 열기](https://workflow.kbiofoundry.kr/)
-
-Workflow와 Unit Operation 카탈로그를 가져오려면 **Ctrl+P**에서 **bfworkflow 카탈로그 동기화하기**를 선택하고 변경 내용을 확인합니다.
-기존 노트는 **bfworkflow 설계에서 노트 만들기**에서 설계를 선택한 뒤 **bfworkflow에 저장된 노트 쓰기**로 실험에 가져옵니다.
-
-### BioModel Portal 연결
-
-Workbench v0.1.5에는 **BioModel Portal** 프리셋이 있습니다. **설정 › 연동 › 외부 MCP 서버**에서
-**BioModel Portal**을 선택하고 **토큰 저장**으로 KBF 로그인 토큰(`KBF_SSO_ACCESS_TOKEN`)을 저장합니다.
-**연결 확인**을 누르면 서버 연결 상태와 계정으로 접근 가능한 MCP 도구 수를 확인할 수 있습니다.
-대화에 쓸 에이전트와 모델은 입력창에서 고릅니다. 모델 목록은 로그인 후 [BioModel Portal](https://biomodel.kbiofoundry.kr/)에서 볼 수 있습니다.
-
-## 화면
-
-화면과 영상은 테스트 보관함과 예시 데이터로 촬영했습니다. 전체 영상은 이전에 찍어 둔 실제 앱 화면을 이어 편집했습니다.
-
-**프로젝트 대화와 노트 탭.** 사이드바에 프로젝트와 그 대화, 노트가 보입니다. 입력창 아래에 에이전트에게 전달되는 프로젝트와
-노트가 표시되고, 오른쪽 탭 패널에서 노트를 열어 고쳤습니다.
-
-![왼쪽 프로젝트 대화, 오른쪽 탭에 열린 실험 노트](docs/workbench/screens/09-note-edited-saved.png)
-
-**에이전트 답변과 플러그인 화면.** 프로젝트 대화에 도구 호출 카드와 에이전트 답변(테스트용 LLM)이 있고, 탭에는 프로젝트의
-실험 목록을 보여주는 예제 플러그인 화면이 열려 있습니다.
-
-![도구 호출 카드와 답변이 있는 대화, 탭에 열린 예제 플러그인 화면](docs/workbench/screens/17-chat-agent-answers.png)
-
-**분리한 창.** 노트 탭을 별도 창으로 떼어냈습니다.
-
-![별도 창에 열린 노트](docs/workbench/screens/12-detached-window.png)
-
-**설정 › 플러그인.** 빌드에 들어 있는 플러그인을 켜고 끌 수 있고, 허락한 권한을 보고 거둘 수 있으며, 그 아래에 플러그인
-자체 설정 페이지가 나옵니다.
-
-![설정 대화상자의 플러그인 페이지, 예제 플러그인의 권한과 설정](docs/workbench/screens/16-settings-plugins.png)
-
-**새 프로젝트.** 만든 빈 프로젝트가 사이드바에 나타나고, 그 안에서 대화를 시작할 수 있습니다.
-
-![사이드바의 빈 프로젝트와 빈 대화](docs/workbench/screens/04-project-in-sidebar.png)
-
-Phase 1 흐름의 다른 화면은 [docs/workbench/screens](docs/workbench/screens)에 있습니다.
+| 구독 계정으로 대화하기 | **설정 › 연동 › 에이전트**에서 로그인 안내를 따른 뒤 입력창에서 에이전트를 고릅니다. Codex는 ChatGPT 계정으로 연결합니다. |
+| 대화 옆에 노트 띄우기 | 오른쪽 탭에서 노트를 보거나 탭의 분리 버튼으로 별도 창에 엽니다. |
+| 에이전트가 제안한 편집 검토하기 | 승인 카드의 변경 내용부터 확인합니다. 추가 정보는 대화의 양식 카드에 채웁니다. |
+| 바탕화면 펫 쓰기 | **설정 › 어시스턴트 › 어시스턴트 보이기**에서 켭니다. v0.1.5의 펫은 현재 대화의 AI 연결과 모델을 사용합니다. |
+| 업데이트 적용하기 | 앱이 백그라운드에서 내려받으면 상태 표시줄의 **업데이트**를 누릅니다. |
 
 ## 출처
 

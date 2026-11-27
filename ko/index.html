@@ -3,32 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="프로젝트 대화를 시작하고, 참고 자료를 붙이고, 웹 출처를 노트에 남긴 뒤 업데이트를 내려받는 흐름을 보여줍니다.">
-  <title>프로젝트 대화에서 연구노트까지 · Biofoundry Workbench</title>
+  <meta name="description" content="Biofoundry Workbench에서 실험을 만들고, 샘플과 이전 대화, 웹 보고서를 한 노트에 모으는 실습입니다.">
+  <title>플레이트 판독 검토 인수인계 · Biofoundry Workbench</title>
   <link rel="stylesheet" href="../guide.css">
 </head>
 <body>
   <header><strong>Biofoundry Workbench</strong><a href="../" lang="en">English</a></header>
   <main>
-    <h1>프로젝트 대화에서 연구노트까지</h1>
-    <p>프로젝트 대화를 시작하고, 참고 자료를 붙이고, 웹 출처를 노트에 남긴 뒤 업데이트를 내려받는 흐름을 보여줍니다.</p>
+    <h1>플레이트 판독 검토 인수인계</h1>
+    <p>Biofoundry Workbench에서 실험을 만들고, 샘플과 이전 대화, 웹 보고서를 한 노트에 모으는 실습입니다.</p>
     <nav aria-label="Biofoundry Workbench">
-      <a class="download" href="https://github.com/sblabkribb/biofoundry-workbench/releases/latest">Windows 설치 파일</a>
-      <a href="https://github.com/sblabkribb/biofoundry-workbench/blob/main/README.ko.md">사용 가이드 읽기</a>
-      <a href="../docs/media/research-workflow.ko.mp4">MP4</a>
+      <a class="download" href="https://github.com/sblabkribb/biofoundry-workbench/releases/latest">Windows 다운로드</a>
+      <a href="https://github.com/sblabkribb/biofoundry-workbench/blob/main/README.ko.md">README 안내</a>
+      <a href="../docs/media/walkthrough/ko/walkthrough.mp4">전체 MP4</a>
     </nav>
-    <video controls playsinline preload="metadata" poster="../docs/workbench/screens/09-note-edited-saved.png" width="1000" height="668">
-      <source src="../docs/media/research-workflow.ko.mp4" type="video/mp4">
+    <video controls playsinline preload="metadata" poster="../docs/media/walkthrough/ko/01-project.jpg" width="1440" height="1000" aria-label="플레이트 판독 검토 인수인계">
+      <source src="../docs/media/walkthrough/ko/walkthrough.mp4" type="video/mp4">
     </video>
-    <h2>챕터</h2>
+    <p>영상은 데모 보관함과 합성 기록을 사용합니다. BioModel Portal과 RAPID의 연결 위치를 보여주고, RAPID 예시 실행을 노트에 인용합니다.</p>
+    <h2>영상 목차</h2>
     <ol>
-      <li><a href="../docs/media/research-workflow.ko.mp4#t=0"><span>0:00</span> 프로젝트 대화 시작</a></li>
-      <li><a href="../docs/media/research-workflow.ko.mp4#t=14.5"><span>0:14</span> 실험 참고 자료 첨부</a></li>
-      <li><a href="../docs/media/research-workflow.ko.mp4#t=29"><span>0:29</span> 웹 결과와 출처를 노트에 기록</a></li>
-      <li><a href="../docs/media/research-workflow.ko.mp4#t=43.5"><span>0:43</span> 대화에서 양식 제출</a></li>
-      <li><a href="../docs/media/research-workflow.ko.mp4#t=55.66"><span>0:56</span> 외부 에이전트의 수정 검토</a></li>
-      <li><a href="../docs/media/research-workflow.ko.mp4#t=70.16"><span>1:10</span> 업데이트 다운로드</a></li>
+      <li><a href="#project"><span>0:00</span> 프로젝트와 실험 만들기</a></li>
+      <li><a href="#workflow"><span>0:12</span> Workflow와 Unit Operation 만들기</a></li>
+      <li><a href="#partbank"><span>0:35</span> PartBank에서 참조 항목 찾기</a></li>
+      <li><a href="#sample"><span>0:44</span> 랩샘플을 노트에서 사용하기</a></li>
+      <li><a href="#reuse"><span>0:51</span> 다른 Workflow의 대화 다시 쓰기</a></li>
+      <li><a href="#selection"><span>1:18</span> 랩노트와 대화에서 선택한 부분 첨부하기</a></li>
+      <li><a href="#browser"><span>1:27</span> 브라우저에서 고른 결과를 대화에 첨부하기</a></li>
+      <li><a href="#biomodel"><span>1:42</span> BioModel Portal 연결 위치 찾기</a></li>
+      <li><a href="#rapid"><span>1:52</span> RAPID 연결과 기존 실행 인용</a></li>
     </ol>
+    <section class="chapter" id="project">
+      <h2>프로젝트와 실험 만들기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/01-project.jpg" width="1440" height="1000" aria-label="프로젝트와 실험 만들기">
+        <source src="../docs/media/walkthrough/ko/01-project.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/01-project.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="workflow">
+      <h2>Workflow와 Unit Operation 만들기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/02-workflow.jpg" width="1440" height="1000" aria-label="Workflow와 Unit Operation 만들기">
+        <source src="../docs/media/walkthrough/ko/02-workflow.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/02-workflow.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="partbank">
+      <h2>PartBank에서 참조 항목 찾기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/03-partbank.jpg" width="1440" height="1000" aria-label="PartBank에서 참조 항목 찾기">
+        <source src="../docs/media/walkthrough/ko/03-partbank.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/03-partbank.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="sample">
+      <h2>랩샘플을 노트에서 사용하기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/04-sample.jpg" width="1440" height="1000" aria-label="랩샘플을 노트에서 사용하기">
+        <source src="../docs/media/walkthrough/ko/04-sample.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/04-sample.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="reuse">
+      <h2>다른 Workflow의 대화 다시 쓰기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/05-reuse.jpg" width="1440" height="1000" aria-label="다른 Workflow의 대화 다시 쓰기">
+        <source src="../docs/media/walkthrough/ko/05-reuse.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/05-reuse.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="selection">
+      <h2>랩노트와 대화에서 선택한 부분 첨부하기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/06-selection.jpg" width="1440" height="1000" aria-label="랩노트와 대화에서 선택한 부분 첨부하기">
+        <source src="../docs/media/walkthrough/ko/06-selection.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/06-selection.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="browser">
+      <h2>브라우저에서 고른 결과를 대화에 첨부하기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/07-browser.jpg" width="1440" height="1000" aria-label="브라우저에서 고른 결과를 대화에 첨부하기">
+        <source src="../docs/media/walkthrough/ko/07-browser.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/07-browser.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="biomodel">
+      <h2>BioModel Portal 연결 위치 찾기</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/08-biomodel.jpg" width="1440" height="1000" aria-label="BioModel Portal 연결 위치 찾기">
+        <source src="../docs/media/walkthrough/ko/08-biomodel.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/08-biomodel.mp4">이 장면의 MP4</a></p>
+    </section>
+    <section class="chapter" id="rapid">
+      <h2>RAPID 연결과 기존 실행 인용</h2>
+      <video controls playsinline preload="none" poster="../docs/media/walkthrough/ko/09-rapid.jpg" width="1440" height="1000" aria-label="RAPID 연결과 기존 실행 인용">
+        <source src="../docs/media/walkthrough/ko/09-rapid.mp4" type="video/mp4">
+      </video>
+      <p><a href="../docs/media/walkthrough/ko/09-rapid.mp4">이 장면의 MP4</a></p>
+    </section>
   </main>
 </body>
 </html>

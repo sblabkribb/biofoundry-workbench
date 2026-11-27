@@ -1,137 +1,110 @@
 # Biofoundry Workbench
 
-**A desktop research workbench: project chat with an AI agent, research notes in tabs, and plugins for biofoundry tools.**
+**Plan an experiment, reuse what your team already knows, and leave the evidence in a lab notebook.**
 
-**English** · [한국어](README.ko.md)
+**English** · [한국어](README.ko.md) · [Download for Windows](https://github.com/sblabkribb/biofoundry-workbench/releases/latest) · [Watch the full walkthrough](https://sblabkribb.github.io/biofoundry-workbench/)
 
-[Get started](#features) · [Screenshots](#screenshots) · [License](LICENSE)
+## Start here
 
-[PartBank](#connect-partbank) · [RAPID](#connect-rapid) · [Workflow](#connect-workflow-bfworkflow) · [BioModel Portal](#connect-biomodel-portal)
+Install the Windows x64 app and open a vault. Choose **Open existing folder** to use an existing labnoteO vault, or **Create a new vault** to follow along in a test folder. To send a message, connect a model in **Settings › Integrations › AI provider** or choose a signed-in external agent from the chat composer. You can create notes and select references as soon as the vault opens.
 
-> Download the Windows x64 installer from the [latest GitHub release](https://github.com/sblabkribb/biofoundry-workbench/releases/latest).
-> Windows SmartScreen may warn on first install because the installer is unsigned. Workbench 0.1.1 and later ask before
-> installing an update. If you're using an older build, install the latest release over it once.
+## Walkthrough · Hand off a plate-reader review
 
-## What it is
+You are picking up a plate-reader review from a colleague. Create an experiment for the handoff, fill in its Workflow and Unit Operation, then bring the sample, previous decisions, and sources into the same project. The footage uses an isolated Workbench vault and synthetic records.
 
-Biofoundry Workbench is a Windows desktop app (Tauri 2 + React) laid out like an LLM chat client, built for
-research work in a biofoundry:
+https://github.com/user-attachments/assets/f3489e60-7872-444c-bff0-0374eb12362b
 
-- **Projects.** The left sidebar groups experiments into projects. Each project holds its chats and its
-  research notes (experiments). Experiments without a project sit under "No project".
-- **Project chat.** The center is a chat with the AI agent. The active project and the open note are given to the
-  agent as context. Tool calls are shown as cards, and changes to notes need your approval first. The agent can also
-  ask for details with a small form card (A2UI) that you fill in and submit right in the chat. A chat can also run
-  on an external coding agent (DeepSeek Harness or Claude Code over ACP) that you turn on in Settings.
-- **Research notes in tabs.** Notes open in a tab panel on the right. Several tabs stay open at once and keep their
-  undo history and scroll position when you switch.
-- **Built-in browser.** Web pages open in a browser tab, with quick links to PartBank, bfworkflow and RAPID. Pick an
-  element or a region of a page and attach it to the chat, or put it straight into a note with **Insert into note**;
-  the assistant can read allowlisted sites and click or type only after you approve each action.
-- **References and models per chat.** Attach other conversations, experiment folders, Workflows, Unit Operations,
-  notes or browser picks to a chat with "+" or `@`, switch conversations from the header and pick the model per chat.
-- **Detachable windows.** Any tab can be popped out into its own window, for example a note in one window and a plugin
-  view in another. Edits made there show up in the main window.
-- **Desktop pet.** The labnoteO Desktop pet is available in Workbench and starts hidden. Turn it on in
-  **Settings › Assistant › Show assistant**, or use the robot button in the left ribbon.
-- **Plugins.** Domain tools come as plugins written against a small, versioned SDK and developed in their own
-  repositories. A plugin can add a sidebar entry, views that open in tabs, tools the agent can call, and a settings
-  page. This release includes an example plugin.
+[Full MP4](docs/media/walkthrough/en/walkthrough.mp4)
 
-The note editor, experiment structure (Workflows, Unit Operations), samples, files, search and the assistant's tools come
-from labnoteO Desktop, on which this app is based.
+The clips show where to connect BioModel Portal and RAPID. The RAPID citation uses a synthetic run record. Live access requires credentials from each service.
 
-## Features
+[Start a project](#1-start-a-project-and-experiment) · [Build the Workflow](#2-build-the-workflow-and-unit-operation) · [Find a PartBank record](#3-find-the-partbank-reference) · [Use a lab sample](#4-use-the-lab-sample-in-a-note) · [Reuse another chat](#5-reuse-another-workflow-chat) · [Attach selected text](#6-attach-selections-from-a-note-and-chat) · [Bring in a browser result](#7-bring-a-browser-result-into-chat) · [Check BioModel Portal](#8-check-biomodel-portal) · [Cite a RAPID run](#9-cite-an-existing-rapid-run)
 
-### Follow a research task from chat to notebook
+### 1. Start a project and experiment
 
-This example follows a GFP expression project. The demo vault, model answers, and sample web data are recorded examples.
+Choose **New project** in the sidebar and name it after the work. Expand the project and choose **New experiment**. Workbench opens the experiment's README note in the right panel. Use **New chat in this project** when you want a conversation that belongs to that project.
 
-**1. Open a vault and start in a project.** Open your labnoteO vault, select a project in the sidebar, and start a
-chat. In **Settings › Integrations › AI provider**, connect your model. Set the experiment folder and model for
-the current chat so you can ask about a particular note or result.
+https://github.com/user-attachments/assets/19e38783-6c9d-4161-a3f1-965105342d4e
 
-**2. Give the assistant the relevant records.** Use **+** or **@** to add a previous conversation, a note, a
-Workflow, or a Unit Operation. The attachments appear as chips, and references are read again when you send a message.
+[MP4](docs/media/walkthrough/en/01-project.mp4)
 
-**3. Bring a result from the browser into the experiment.** Open the source in a browser tab. Press **Ctrl+Shift+S**,
-choose the relevant table, and click **Insert into note**. The notebook keeps the table and a source link together.
-For general keyword searches in chat, configure a SearXNG server under **Settings › Assistant › Web search address**.
-Results can come from any public domain indexed by the server's search engines.
+### 2. Build the Workflow and Unit Operation
 
-**4. Review the assistant's next step.** Fill in a form card in the chat when the assistant needs more information.
-Review the planned change in the approval card before letting an external agent edit a note.
+In the experiment note, choose **Add workflow**, pick a catalog entry, and give it a name. Open that Workflow and choose **Add UO** to create a Unit Operation for a specific step. For the walkthrough, the step is reviewing a saved instrument report.
 
-**5. Keep the app current.** Workbench checks the public release channel on startup and downloads the update in the
-background. Click **Update** at the bottom left when the app has it ready. The final chapter shows the published
-Windows build updating from `v0.1.1` to `v0.1.2` through the download stage.
+To bring your team's templates in, use **Settings › Integrations › Research services › bfworkflow**. Choose the server or desktop app and save its API key. From **Ctrl+P**, run **Sync catalogs from bfworkflow** and review the changes. Use **Create notes from a bfworkflow design** and **Use the notes saved in bfworkflow** to bring existing notes into the experiment. [Open bfworkflow](https://workflow.kbiofoundry.kr/)
 
-[Watch the English overview](https://sblabkribb.github.io/biofoundry-workbench/) · [MP4](docs/media/research-workflow.en.mp4)
+https://github.com/user-attachments/assets/3b430350-d0a7-43e1-a078-87aa097c5711
 
-| Time | Chapter |
+[MP4](docs/media/walkthrough/en/02-workflow.mp4)
+
+### 3. Find the PartBank reference
+
+Set your **partbank server** or **partbank desktop app** address and API key under **Settings › Integrations › Research services › partbank**, then set **Connection to search**. PartBank issues keys under **Profile › API Keys**. [Open PartBank](https://partbank.kbiofoundry.kr/)
+
+Open **Samples › partbank**, search for the reference, and choose **Import as sample**. Check the source record from the same result before you use it in the review.
+
+https://github.com/user-attachments/assets/deefbcb6-0fac-4378-889c-8344be332f92
+
+[MP4](docs/media/walkthrough/en/03-partbank.mp4)
+
+### 4. Use the lab sample in a note
+
+With the Workflow note open, accept the **Insert** prompt after registering the sample. To reuse it later, right-click the sample in **Samples** and select **Insert reference**. Workbench records the sample ID and alias in the note.
+
+https://github.com/user-attachments/assets/ffae2c6d-017a-441d-b62d-a2d88718eacd
+
+[MP4](docs/media/walkthrough/en/04-sample.mp4)
+
+### 5. Reuse another Workflow chat
+
+Open a new project chat and type **@** or select **+**. Choose the earlier conversation from **Conversations**. You can also attach the relevant Workflow or Unit Operation. Check the chips above the composer before sending your question.
+
+https://github.com/user-attachments/assets/9e0eb2d7-a8df-44d7-aa96-7add3b46dd3b
+
+[MP4](docs/media/walkthrough/en/05-reuse.mp4)
+
+### 6. Attach selections from a note and chat
+
+Highlight the specific paragraph in the note and choose **Attach selected text**. Repeat with a passage in a chat message. Workbench puts each selected passage in the composer so you can ask about those details together.
+
+https://github.com/user-attachments/assets/7ca46dc1-24e8-4381-a6ed-a65bce5a4ff0
+
+[MP4](docs/media/walkthrough/en/06-selection.mp4)
+
+### 7. Bring a browser result into chat
+
+Open the saved report in a Workbench browser tab. Select the relevant passage and use **Attach selected text**, or use **Ctrl+Shift+S** to pick an element or area. Choose **Insert into note** if you want to save the selected result with its source link.
+
+https://github.com/user-attachments/assets/c288282c-1e8b-4484-90af-9b604a84bb3c
+
+[MP4](docs/media/walkthrough/en/07-browser.mp4)
+
+### 8. Check BioModel Portal
+
+Open **Settings › Integrations › External MCP servers › BioModel Portal**. Use **Save token** with your KBF sign-in token and select **Test connection**. The check reports the server and tool count for your account. Browse the model catalog after signing in to the portal. [Open BioModel Portal](https://biomodel.kbiofoundry.kr/)
+
+https://github.com/user-attachments/assets/fedc8b44-da8d-46f0-930a-9898092172b1
+
+[MP4](docs/media/walkthrough/en/08-biomodel.mp4)
+
+### 9. Cite an existing RAPID run
+
+Open **Settings › Integrations › External MCP servers › RAPID**. Save a key from the RAPID **MCP** tab or a KBF sign-in token, then select **Test connection**. Open an existing run in the Workbench browser. Pick the result and choose **Insert into note › Insert RAPID run** when its run ID is recognized. Keep the ID and source alongside the review. [Open RAPID](https://rapid.kbiofoundry.kr/)
+
+https://github.com/user-attachments/assets/d023c484-3842-4f05-b276-6db92ba3cd57
+
+[MP4](docs/media/walkthrough/en/09-rapid.mp4)
+
+## Everyday controls
+
+| When you want to… | In Workbench |
 | --- | --- |
-| 0:00 | Start a project chat |
-| 0:14 | Attach research context |
-| 0:29 | Cite a web result in a note |
-| 0:43 | Submit a form card |
-| 0:57 | Review an external agent's edit |
-| 1:11 | Download a Workbench update |
-
-### Connect PartBank
-
-Open **Settings › Integrations › Research services › partbank**. Enter the address and API key for your
-**partbank server** or **partbank desktop app**, then choose it in **Connection to search**. Issue an API key from
-**Profile › API Keys** in PartBank. [Open PartBank](https://partbank.kbiofoundry.kr/)
-
-In the Workbench sidebar, open **Samples › partbank**, find an existing item, and select **Import as sample**.
-You can open the original PartBank record from the results.
-
-### Connect RAPID
-
-Open **Settings › Integrations › External MCP servers › RAPID**. Use **Save token** with an API key from the
-RAPID **MCP** tab or your KBF sign-in token, then select **Test connection**. [Open RAPID](https://rapid.kbiofoundry.kr/)
-
-To cite an existing run, open it in a Workbench browser tab and use **Ctrl+Shift+S** to select part of the page.
-Click **Insert into note**, then **Insert RAPID run** when Workbench recognizes the run. The note records the run ID and source link.
-
-### Connect Workflow (bfworkflow)
-
-Open **Settings › Integrations › Research services › bfworkflow**. Choose **Server** or **bfworkflow desktop app**.
-For a server connection, enter the server address. Save the API key for the chosen connection. The web app issues keys
-under **Profile › API keys**. [Open bfworkflow](https://workflow.kbiofoundry.kr/)
-
-To bring in the Workflow and Unit Operation catalogs, press **Ctrl+P**, choose **Sync catalogs from bfworkflow**,
-and review the proposed changes. To import saved notes, select **Create notes from a bfworkflow design**, choose a
-design, and select **Use the notes saved in bfworkflow** to bring them into your experiment.
-
-### Connect BioModel Portal
-
-Workbench v0.1.5 includes a **BioModel Portal** preset. Open **Settings › Integrations › External MCP servers**,
-select **BioModel Portal**, and use **Save token** to store your KBF sign-in token (`KBF_SSO_ACCESS_TOKEN`). Select
-**Test connection** to check the server connection and see how many MCP tools your account can access.
-Select the chat agent and model in the composer. To browse the model catalog, sign in to [BioModel Portal](https://biomodel.kbiofoundry.kr/).
-
-## Screenshots
-
-Taken from the English UI with demo data. The overview combines previously recorded clips from the app.
-
-**Project chat with a note tab.** The left sidebar shows the project, its chats and its notes. The experiment note
-stays open on the right alongside the project chat.
-
-![English project chat alongside an open experiment note](docs/images/en/project-chat-note-tab.png)
-
-**Agent answer and tool calls.** The project chat shows the test agent's read and edit calls, the approved change,
-and the answer.
-
-![English project chat with tool-call cards and the test agent's answer](docs/images/en/project-chat-agent.png)
-
-**Folder picker.** Choose an experiment folder to narrow the context of the current chat.
-
-![English project chat with the experiment folder picker open](docs/workbench/screens/composer-folder-menu-en.png)
-
-**Form card.** The assistant can collect setup details in the chat and acknowledge them after submission.
-
-![A submitted experiment setup form in the English chat interface](docs/images/en/project-chat-form.png)
+| Use a subscription | Open **Settings › Integrations › Agents**, follow the sign-in instructions for the agent, then select it in the composer. Codex uses your ChatGPT login. |
+| Keep a note visible beside chat | Leave it in the right tab panel or use the tab's pop-out button to open a separate window. |
+| Review an agent's proposed edit | Read the approval card before applying the edit. Complete any requested form in chat. |
+| Show the desktop pet | Use **Settings › Assistant › Show assistant**. In v0.1.5 the pet uses the active chat's AI connection and model. |
+| Apply an update | Workbench downloads a release in the background. Click **Update** in the status bar when it is ready. |
 
 ## Credits
 
