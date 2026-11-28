@@ -48,6 +48,8 @@ https://github.com/user-attachments/assets/d8238762-e8f2-4c66-8e19-39bb25a24922
 
 실험 노트에서 **Workflow 추가**를 누릅니다. 카탈로그에서 항목을 고르고 이름을 붙인 뒤, 열린 Workflow에서 **UO 추가**를 눌러 실제로 기록할 단계를 만듭니다. 영상에서는 기존 장비 보고서를 검토하는 단계를 추가합니다.
 
+**브라우저에서 기존 설계 검토하기.** 오른쪽 탭 패널에서 **새 브라우저 탭**을 열고 **bfworkflow** 바로 가기를 선택합니다. 로그인 안내가 나오면 탭에서 로그인합니다. 저장된 설계를 열어 Unit Operation을 확인하고, **요소 선택(Ctrl+Shift+S)**으로 필요한 검토 기준을 대화에 붙입니다. **노트에 넣기**를 누르면 선택한 내용과 출처 링크를 실험 노트에 남길 수 있습니다.
+
 팀의 템플릿을 가져오려면 **설정 › 연동 › 연구 서비스 › bfworkflow**에서 서버나 데스크톱 앱을 고르고 API 키를 저장합니다. **Ctrl+P → bfworkflow 카탈로그 동기화하기**로 변경 사항을 확인합니다. 기존 노트는 **bfworkflow 설계에서 노트 만들기 → bfworkflow에 저장된 노트 쓰기**로 실험에 가져올 수 있습니다. [bfworkflow 열기](https://workflow.kbiofoundry.kr/)
 
 https://github.com/user-attachments/assets/6bfbc941-fc52-432d-9a68-d435af742082
@@ -58,9 +60,9 @@ https://github.com/user-attachments/assets/6bfbc941-fc52-432d-9a68-d435af742082
 
 ### 3. PartBank에서 참조 항목 찾기
 
-**설정 › 연동 › 연구 서비스 › partbank**에서 서버 또는 데스크톱 앱의 주소와 API 키를 저장하고 **검색에 쓸 연결**을 고릅니다. API 키는 PartBank의 **Profile › API Keys**에서 발급합니다. [PartBank 열기](https://partbank.kbiofoundry.kr/)
+**브라우저에서 원본 항목 확인하기.** **새 브라우저 탭**에서 **PartBank** 바로 가기를 열고 필요하면 로그인합니다. 참조 시료의 원본 항목을 찾아 **요소 선택(Ctrl+Shift+S)**으로 KID를 고르면 대화에 붙습니다. 노트에 남기려면 **노트에 넣기**를 누르고, KID가 인식되면 **샘플 참조로 넣기 (PartBank)**를 고릅니다.
 
-**샘플 › partbank**에서 참조 항목을 찾아 **샘플로 가져오기**를 누릅니다. 같은 검색 결과에서 PartBank 원본을 열어 확인할 수 있습니다.
+**보관함에 샘플 등록하기.** **설정 › 연동 › 연구 서비스 › partbank**에서 주소와 API 키를 저장하고 **검색에 쓸 연결**을 고릅니다. **샘플 › partbank**에서 항목을 찾아 **샘플로 가져오기**를 누릅니다. API 키는 PartBank의 **Profile › API Keys**에서 발급합니다. [PartBank 열기](https://partbank.kbiofoundry.kr/)
 
 https://github.com/user-attachments/assets/805aa4c9-4a70-4361-8a62-48f6fc2c556b
 

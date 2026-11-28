@@ -48,6 +48,8 @@ https://github.com/user-attachments/assets/19e38783-6c9d-4161-a3f1-965105342d4e
 
 In the experiment note, choose **Add workflow**, pick a catalog entry, and give it a name. Open that Workflow and choose **Add UO** to create a Unit Operation for a specific step. For the walkthrough, the step is reviewing a saved instrument report.
 
+**Review an existing design in the browser.** In the right tab panel, choose **New browser tab** and open the **bfworkflow** shortcut. Sign in there if prompted, then open a saved design and review its Unit Operations. Use **Select element (Ctrl+Shift+S)** to attach the review criterion to the chat. Choose **Insert into note** to keep the selected text and source link in the experiment note.
+
 To bring your team's templates in, use **Settings › Integrations › Research services › bfworkflow**. Choose the server or desktop app and save its API key. From **Ctrl+P**, run **Sync catalogs from bfworkflow** and review the changes. Use **Create notes from a bfworkflow design** and **Use the notes saved in bfworkflow** to bring existing notes into the experiment. [Open bfworkflow](https://workflow.kbiofoundry.kr/)
 
 https://github.com/user-attachments/assets/3b430350-d0a7-43e1-a078-87aa097c5711
@@ -58,9 +60,9 @@ https://github.com/user-attachments/assets/3b430350-d0a7-43e1-a078-87aa097c5711
 
 ### 3. Find the PartBank reference
 
-Set your **partbank server** or **partbank desktop app** address and API key under **Settings › Integrations › Research services › partbank**, then set **Connection to search**. PartBank issues keys under **Profile › API Keys**. [Open PartBank](https://partbank.kbiofoundry.kr/)
+**Look up the source record in the browser.** Choose **New browser tab** and open the **PartBank** shortcut. Sign in if prompted. Find the reference sample, open its record, and use **Select element (Ctrl+Shift+S)** on the KID. The selection appears in the chat composer. To keep it in the note, choose **Insert into note**, then **Insert as sample reference (PartBank)** when Workbench recognizes the KID.
 
-Open **Samples › partbank**, search for the reference, and choose **Import as sample**. Check the source record from the same result before you use it in the review.
+**Register the sample in the vault.** Set your **partbank server** or **partbank desktop app** address and API key under **Settings › Integrations › Research services › partbank**, then set **Connection to search**. Open **Samples › partbank**, search for the record, and choose **Import as sample**. PartBank issues keys under **Profile › API Keys**. [Open PartBank](https://partbank.kbiofoundry.kr/)
 
 https://github.com/user-attachments/assets/deefbcb6-0fac-4378-889c-8344be332f92
 
